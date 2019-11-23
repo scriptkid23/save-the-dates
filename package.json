@@ -1,9 +1,9 @@
 {
-  "name": "authentication-nodejs-express",
+  "name": "skeleton-authentication-express",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "nodemon ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -13,6 +13,7 @@
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.7.12",
     "morgan": "~1.9.1",
     "nodemon": "^2.0.1",
     "passport": "^0.4.0",
