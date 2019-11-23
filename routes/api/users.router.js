@@ -1,14 +1,17 @@
 const express = require("express");
+const mongoose = require('mongoose');
 const router = express.Router();
-const passport = require("passport");
+const auth = require('../auth');
 
-const authController = require("../controllers/authentication.controller");
-
+const authController = require("../../controllers/authentication.controller");
 //auth not required
-router.post("/auth/login",authController.Login);
+
+router.post("/auth/register",auth.optional,authController.register);
+router.post("/auth/login",auth.optional,authController.Login);
 router.post("/auth/signup",authController.Signup);
 router.post("/auth/changepassword",authController.ChangePassword);
 router.post("/auth/forgotpassword",authController.ForgotPassword);
+router.post("/auth/logout",auth.required,authController.Logout);
 // router.post("/users/signup", users_controller.signup);
 
 // router.post(

@@ -4,10 +4,27 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors   = require('cors');
+var mongoose = require('mongoose');
 
-// API 
+// Mongodb config
+var database = require('./config/database.config');
+
+mongoose.connect(database.database.url,database.options,(error)=>{
+  // console.log(error)
+})
+  .then()
+  .catch(error => console.log(error));
+mongoose.set('debug',true);
+
+// Models & routers
+
+require('./models/Users.model');
+require('./config/passport.config');
+
+// Api
+
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users.router');
+var usersRouter = require('./routes/api/users.router');
 var app = express();
 
 // view engine setup
@@ -22,7 +39,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 
 app.use('/', indexRouter);
-app.use('/api/', usersRouter);
+app.use('/api', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
