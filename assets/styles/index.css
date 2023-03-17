@@ -1,0 +1,22 @@
+@font-face {
+    font-family: FrenchVPBold;
+    src: url('../font/FrenchVP_Bold.ttf') format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: FrenchVPRegular;
+    src: url('../font/FrenchVP_Regular.ttf') format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+body {
+    height: 100vh;
+}
+
+.font-french-regular {
+    font-family: "FrenchVPBold";
+}
