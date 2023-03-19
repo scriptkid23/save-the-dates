@@ -18,18 +18,17 @@ body {
 }
 
 .font-french-regular {
-    font-family: "FrenchVPBold";
+    font-family: "FrenchVPRegular";
 }
 
 .std-image {
-    height: 60%;
+    height: 55%;
     width: 70%;
 }
 .std-hr {
     margin-top: 10px;
     height: 70px;
     width: 0.6%;
-
     
     background: hsla(0, 0%, 100%, 1);
 
