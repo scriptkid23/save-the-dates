@@ -20,3 +20,24 @@ body {
 .font-french-regular {
     font-family: "FrenchVPBold";
 }
+
+.std-image {
+    height: 60%;
+    width: 70%;
+}
+.std-hr {
+    margin-top: 10px;
+    height: 70px;
+    width: 0.6%;
+
+    
+    background: hsla(0, 0%, 100%, 1);
+
+    background: linear-gradient(360deg, hsla(0, 0%, 100%, 1) 0%, hsla(0, 0%, 100%, 1) 22%, hsla(43, 100%, 96%, 1) 100%);
+    
+    background: -moz-linear-gradient(360deg, hsla(0, 0%, 100%, 1) 0%, hsla(0, 0%, 100%, 1) 22%, hsla(43, 100%, 96%, 1) 100%);
+    
+    background: -webkit-linear-gradient(360deg, hsla(0, 0%, 100%, 1) 0%, hsla(0, 0%, 100%, 1) 22%, hsla(43, 100%, 96%, 1) 100%);
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFFFFF", endColorstr="#FFFFFF", GradientType=1 );
+}
