@@ -30,13 +30,22 @@ body {
     height: 70px;
     width: 0.6%;
     
-    background: hsla(0, 0%, 100%, 1);
+    background: linear-gradient(to bottom,#BBBBBB 0%,#FFFFFF 70%);
+}
+.std-font-gradient{
+    font-size: 100px;
+    font-weight: 500;
+    margin-left: 25%;
+    margin-bottom: -50px;
+    padding: 0px;
+    letter-spacing: 2px;
+    background-clip: initial;
+    background: linear-gradient(
+            to right, #333333 0%, #CCCCCC 50%,#FFFFFF 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
 
-    background: linear-gradient(360deg, hsla(0, 0%, 100%, 1) 0%, hsla(0, 0%, 100%, 1) 22%, hsla(43, 100%, 96%, 1) 100%);
-    
-    background: -moz-linear-gradient(360deg, hsla(0, 0%, 100%, 1) 0%, hsla(0, 0%, 100%, 1) 22%, hsla(43, 100%, 96%, 1) 100%);
-    
-    background: -webkit-linear-gradient(360deg, hsla(0, 0%, 100%, 1) 0%, hsla(0, 0%, 100%, 1) 22%, hsla(43, 100%, 96%, 1) 100%);
-    
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFFFFF", endColorstr="#FFFFFF", GradientType=1 );
+.margin-top-50{
+    margin-top:50px;
 }
