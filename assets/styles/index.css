@@ -15,6 +15,7 @@
 
 body {
     height: 100vh;
+    background-color: #F7F5F4;
 }
 
 .font-french-regular {
@@ -22,8 +23,18 @@ body {
 }
 
 .std-image {
-    height: 55%;
-    width: 70%;
+    height: 300px;
+    width: 60%;
+    text-align: center;
+    min-height: 300px;
+    max-height: 400px;
+    background-color: black !important;
+    background-blend-mode: difference;
+    background-size: cover;
+    background-position:0 53%;
+    padding:40px;
+    filter:grayscale(20%) invert(80%);
+    background-image: url("https://media.istockphoto.com/id/868959702/photo/happy-bride-and-groom-in-black-and-white.jpg?s=170667a&w=0&k=20&c=IU8NLDdDu0hBZMuxV-lpYWXUNlgWEX9H3vP7RtPZJzw=");
 }
 .std-hr {
     margin-top: 10px;
@@ -36,7 +47,7 @@ body {
     font-size: 100px;
     font-weight: 500;
     margin-left: 25%;
-    margin-bottom: -50px;
+    margin-bottom: -10%;
     padding: 0px;
     letter-spacing: 2px;
     background-clip: initial;
@@ -46,6 +57,41 @@ body {
     -webkit-background-clip: text;
 }
 
+.image-01{
+    width: 100%;
+    position: relative;
+}
+
 .margin-top-50{
-    margin-top:50px;
+    margin-top: 3%;
+}
+
+.font-01{
+
+    font-family: "FrenchVPRegular";
+    font-size: 75px;
+    color: white !important;
+    mix-blend-mode: difference;
+    top: 50%;
+    position: absolute;
+    right: 15%;
+    bottom: -10%;
+    resize: both;
+    border: 0px solid;
+    display: flex;
+    align-items: end;
+}
+
+.font-size-25{
+    font-size: 25px;
+}
+
+.font-size-10{
+    font-size: 10px;
+}
+
+@media (max-width: 768px){
+    .font-01{
+        display: none;
+    }
 }
