@@ -1,8 +1,9 @@
 import { useCountdown } from "@/components/useCountdown";
+import dynamic from "next/dynamic";
 
 const start_time = "2023-05-07";
 
-export default function Invite() {
+function Invite() {
   const [days, hours, minutes, seconds] = useCountdown(start_time);
 
   return (
@@ -67,3 +68,7 @@ export default function Invite() {
     </div>
   );
 }
+
+export default dynamic(() => Promise.resolve(Invite), {
+  ssr: false,
+});
