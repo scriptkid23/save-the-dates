@@ -1,10 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
 @font-face {
   font-family: scriptin;
   src: url("/assets/fonts/SCRIPTIN.ttf");
+}
+
+* {
+  box-sizing: border-box;
 }
 
 :root {
@@ -49,7 +57,84 @@ body::after {
 .font-scriptin {
   font-family: scriptin !important;
 }
+
+.font-bebas {
+  font-family: 'Bebas Neue', cursive;
+}
+
 body::before {
   background: #8C8C8C;
   filter: url(#noiseFilter);
+}
+
+.countdown-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.countdown-item {
+  color: #111;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 30px;
+  padding-top: 10px;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  font-family: 'Bebas Neue', cursive;
+}
+
+.countdown-item span {
+  color: #333;
+  font-size: 12px;
+  text-transform: uppercase;
+
+
+}
+
+.countdown-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+}
+
+@keyframes fadeInLeftToRight {
+  from {
+    opacity: 0;
+    transform: translate3d(-20%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInRightToLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(20%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.la-picture {
+  opacity: 0;
+  animation: fadeInLeftToRight 0.5s ease-in both;
+}
+
+.tv-picture {
+  opacity: 0;
+  animation: fadeInRightToLeft 0.5s ease-in both;
 }

@@ -16,7 +16,7 @@ export default function Home() {
           <p className="font-scriptin text-5xl text-center">Thinh Vuong</p>
         </div>
       </main>
-      <svg>
+      <svg style={{ display: "none" }}>
         <filter id="noiseFilter">
           <feTurbulence
             type="fractalNoise"
