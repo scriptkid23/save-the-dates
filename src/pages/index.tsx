@@ -1,37 +1,54 @@
-import OrnamentAnimation from "../ornament-animation.json";
-import Lottie from "lottie-react";
+import Image from "next/image";
 
-export default function Home() {
+import Lottie from "lottie-react";
+import OrnamentAnimation from "../ornament-animation.json";
+import { motion } from "framer-motion";
+import Countdown from "@/components/countdown";
+import Sheet from "react-modal-sheet";
+import ModalSheet from "@/components/ModelSheet";
+
+export default function Example() {
   return (
-    <div>
-      <main className={`flex h-screen flex-col`}>
-        <Lottie
-          animationData={OrnamentAnimation}
-          loop={false}
-          style={{ height: "84px" }}
-        />
+    <div className="wrapper">
+      <div className="flex justify-center flex-col items-center pt-2.5">
         <div>
-          <p className="font-scriptin text-5xl text-center">Lan Anh</p>
-          <p className="font-scriptin text-xl text-center m-2.5">&</p>
-          <p className="font-scriptin text-5xl text-center">Thinh Vuong</p>
+          <p className="font-bebas font-medium tracking-wider	 text-center text-xs sm-text-md">
+            You are invited to the
+          </p>
+          <p className="font-bebas font-medium tracking-wider text-center text-xs">
+            wedding dinner of
+          </p>
+          <div>
+            <Lottie
+              animationData={OrnamentAnimation}
+              loop={false}
+              style={{ height: "75px" }}
+            />
+          </div>
         </div>
-      </main>
-      <svg style={{ display: "none" }}>
-        <filter id="noiseFilter">
-          <feTurbulence
-            type="fractalNoise"
-            baseFrequency="6"
-            stitchTiles="stitch"
-          />
-          <feColorMatrix
-            in="colorNoise"
-            type="matrix"
-            values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0"
-          />
-          <feComposite operator="in" in2="SourceGraphic" result="monoNoise" />
-          <feBlend in="SourceGraphic" in2="monoNoise" mode="screen" />
-        </filter>
-      </svg>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Image src={"/assets/text.svg"} alt="text" width={300} height={300} />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Countdown />
+        </motion.div>
+      </div>
+      <ModalSheet
+        className="absolute"
+        style={{ bottom: "106px", left: "82px" }}
+      />
+      <ModalSheet
+        className="absolute"
+        style={{ right: "98px", bottom: "140px" }}
+      />
     </div>
   );
 }

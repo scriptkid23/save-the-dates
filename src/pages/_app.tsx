@@ -5,9 +5,9 @@ import { NEXT_SEO_DEFAULT } from "../../next-seo.config";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <div className="h-screen">
       <Component {...pageProps} />
       <DefaultSeo {...NEXT_SEO_DEFAULT} />
-    </>
+    </div>
   );
 }
