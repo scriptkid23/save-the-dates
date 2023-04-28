@@ -2,15 +2,16 @@ import { NextSeoProps } from "next-seo";
 
 export const NEXT_SEO_DEFAULT: NextSeoProps = {
   titleTemplate: "%s",
-  defaultTitle: "Save the Date",
-  description: "News of Web3",
+  defaultTitle: "Đám cưới của Lan Anh và Thịnh Vượng",
+  description:
+    "Sự hiện diện của quý khách là niềm vinh hạnh cho gia đình chúng tôi. Rất hân hạnh đón tiếp!",
   openGraph: {
     type: "website",
     locale: "en_IE",
-    title: "Open Graph Snews",
+    title: "Đây là ảnh chú rể muốn hiển thị",
     images: [
       {
-        url: "",
+        url: "/assets/thumbnail.jpg",
         width: 800,
         height: 600,
         alt: "OG Image Alt Snews",
@@ -20,7 +21,7 @@ export const NEXT_SEO_DEFAULT: NextSeoProps = {
   },
   twitter: {
     handle: "@hoando",
-    site: "@snews",
+    site: "@damcuoi",
     cardType: "summary_large_image",
   },
 };
