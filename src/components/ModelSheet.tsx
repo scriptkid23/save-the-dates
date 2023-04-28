@@ -122,8 +122,6 @@ function LocationElement() {
   );
 }
 function TabElement(props: any) {
-  console.log(props);
-
   switch (props.tabId) {
     case 0:
       return <GeneralElement />;
@@ -138,7 +136,6 @@ function TabElement(props: any) {
 export default function ModalSheet({ className, style }: Props) {
   const [isOpen, setOpen] = useState(false);
   const [tabId, setTabId] = useState<number>(0);
-  console.log(tabId);
   return (
     <>
       <div className={className} style={style} onClick={() => setOpen(true)}>
