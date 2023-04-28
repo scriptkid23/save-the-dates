@@ -4,6 +4,7 @@ import { useState } from "react";
 type Props = {
   className: string;
   style?: any;
+  role: boolean;
 };
 function GeneralElement() {
   return (
@@ -133,7 +134,7 @@ function TabElement(props: any) {
       return <DonateElement />;
   }
 }
-export default function ModalSheet({ className, style }: Props) {
+export default function ModalSheet({ className, style, role }: Props) {
   const [isOpen, setOpen] = useState(false);
   const [tabId, setTabId] = useState<number>(0);
   return (
@@ -156,7 +157,7 @@ export default function ModalSheet({ className, style }: Props) {
                 className={`tab ${tabId === 0 && "tab-active"}`}
                 onClick={() => setTabId(0)}
               >
-                General 👰🏻‍♀️
+                General {!role ? "👰🏻‍♀️" : "🤵🏻‍♂️"}
               </a>
               <a
                 className={`tab ${tabId === 1 && "tab-active"}`}

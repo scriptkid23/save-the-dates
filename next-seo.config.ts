@@ -8,6 +8,8 @@ export const NEXT_SEO_DEFAULT: NextSeoProps = {
   openGraph: {
     type: "website",
     locale: "en_IE",
+    description:
+      "Sự hiện diện của quý khách là niềm vinh hạnh cho gia đình chúng tôi. Rất hân hạnh đón tiếp!",
     title: "Đây là ảnh chú rể muốn hiển thị",
     images: [
       {

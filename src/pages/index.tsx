@@ -44,10 +44,12 @@ export default function Example() {
       <ModalSheet
         className="absolute"
         style={{ bottom: "106px", left: "82px" }}
+        role={false}
       />
       <ModalSheet
         className="absolute"
         style={{ right: "98px", bottom: "140px" }}
+        role={true}
       />
     </div>
   );
