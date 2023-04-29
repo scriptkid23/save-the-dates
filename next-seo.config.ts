@@ -2,7 +2,7 @@ import { NextSeoProps } from "next-seo";
 
 export const NEXT_SEO_DEFAULT: NextSeoProps = {
   titleTemplate: "%s",
-  defaultTitle: "Đám cưới của Lan Anh và Thịnh Vượng",
+  defaultTitle: "Thư mời Bee & Fox gửi bạn 💕",
   description:
     "Sự hiện diện của quý khách là niềm vinh hạnh cho gia đình chúng tôi. Rất hân hạnh đón tiếp!",
   openGraph: {
@@ -10,7 +10,7 @@ export const NEXT_SEO_DEFAULT: NextSeoProps = {
     locale: "en_IE",
     description:
       "Sự hiện diện của quý khách là niềm vinh hạnh cho gia đình chúng tôi. Rất hân hạnh đón tiếp!",
-    title: "Đây là ảnh chú rể muốn hiển thị",
+    title: "Thư mời Bee & Fox gửi bạn 💕",
     images: [
       {
         url: "/assets/thumbnail.jpg",
