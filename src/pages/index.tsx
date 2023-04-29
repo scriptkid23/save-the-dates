@@ -40,6 +40,14 @@ export default function Example() {
         >
           <Countdown />
         </motion.div>
+        <div>
+          <p className="uppercase font-inter text-black text-xs font-bold text-center">
+            lễ thành hôn
+          </p>
+          <p className="text-black font-inter text-sm font-medium text-center">
+            15:00 PM - 08.05.2023
+          </p>
+        </div>
       </div>
       <ModalSheet
         className="absolute"
