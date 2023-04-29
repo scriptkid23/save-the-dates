@@ -138,3 +138,11 @@ body {}
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
   }
 }
+
+.sheet-background {
+  background: url('/assets/background.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-y: 25rem;
+  background-position-x: -100px;
+}
