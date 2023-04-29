@@ -6,6 +6,7 @@ type Props = {
   className: string;
   style?: any;
   role: boolean;
+  sound: string;
 };
 function GeneralElement(props: any) {
   return (
@@ -41,9 +42,9 @@ function GeneralElement(props: any) {
             {props.role ? `Tại tư gia nhà trai` : `Tại tư gia nhà gái`}
           </p>
           <p className="uppercase text-neutral-focus font-medium text-center text-xs">
-            {props.role
+            {!props.role
               ? `Xóm 8, Xã Thạch Thán, Quốc Oai, Hà Nội`
-              : `Thôn Miếu Môn, Xã Trần Phú, Huyện Chương Mỹ, Hà Nội.`}
+              : `Thôn Miếu Môn, Xã Trần Phú, Huyện Chương Mỹ, Hà Nội`}
           </p>
         </div>
         <div>
@@ -167,13 +168,11 @@ function TabElement(props: any) {
       return <DonateElement />;
   }
 }
-export default function ModalSheet({ className, style, role }: Props) {
+export default function ModalSheet({ className, style, role, sound }: Props) {
   const [isOpen, setOpen] = useState(false);
   const [tabId, setTabId] = useState<number>(0);
   const musicPlayers = useRef<HTMLAudioElement | undefined>(
-    typeof Audio !== "undefined"
-      ? new Audio("/assets/sound/sound1.mp3")
-      : undefined
+    typeof Audio !== "undefined" ? new Audio(sound) : undefined
   );
   const handleOpen = () => {
     setOpen(true);

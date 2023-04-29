@@ -45,11 +45,13 @@ export default function Example() {
         className="absolute"
         style={{ bottom: "106px", left: "82px" }}
         role={false}
+        sound="/assets/sound/sound1.mp3"
       />
       <ModalSheet
         className="absolute"
         style={{ right: "98px", bottom: "140px" }}
         role={true}
+        sound="/assets/sound/sound2.mp3"
       />
     </div>
   );
