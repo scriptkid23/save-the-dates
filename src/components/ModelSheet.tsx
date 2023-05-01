@@ -71,25 +71,33 @@ function GeneralElement(props: any) {
   );
 }
 
-function DonateElement() {
+function DonateElement(props: any) {
   return (
     <>
       {" "}
       <div className="my-2">
         <p className="uppercase font-medium text-center text-xs leading-6">
-          nguyen do lan anh
+          {props.role ? `duong thinh vuong` : `nguyen do lan anh`}
         </p>
         <p className="uppercase text-neutral-focus font-medium text-center font-bold mb-3 whitespace-pre-wrap">
-          {`15391236666 - Ngân hàng SCB`}
+          {props.role
+            ? `336869999 - Ngân hàng TMCP Nam A`
+            : `15391236666 - Ngân hàng SCB`}
         </p>
         <div className="flex justify-center items-center">
           {/* <Image src="/assets/qr.png"/> */}
-          <Image src={"/assets/qr.png"} alt="qrcode" width={300} height={300} />
+          <Image
+            src={props.role ? "/assets/qr.jpg" : "/assets/qr.png"}
+            alt="qrcode"
+            width={300}
+            height={300}
+          />
         </div>
       </div>
     </>
   );
 }
+
 function LocationElement(props: any) {
   const handleGoto = (location: string) => {
     window.open(location, "_blank");
@@ -207,6 +215,7 @@ function LocationElement(props: any) {
     </>
   );
 }
+
 function TabElement(props: any) {
   switch (props.tabId) {
     case 0:
@@ -214,11 +223,12 @@ function TabElement(props: any) {
     case 1:
       return <LocationElement role={props.role} />;
     case 2:
-      return <DonateElement />;
+      return <DonateElement role={props.role} />;
     default:
-      return <DonateElement />;
+      return <DonateElement role={props.role} />;
   }
 }
+
 export default function ModalSheet({ className, style, role, sound }: Props) {
   const [isOpen, setOpen] = useState(false);
   const [tabId, setTabId] = useState<number>(0);
