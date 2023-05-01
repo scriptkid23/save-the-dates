@@ -41,10 +41,10 @@ function GeneralElement(props: any) {
           <p className="uppercase font-medium text-center text-xs leading-6">
             {props.role ? `Tại tư gia nhà trai` : `Tại tư gia nhà gái`}
           </p>
-          <p className="uppercase text-neutral-focus font-medium text-center text-xs">
+          <p className="uppercase text-neutral-focus font-medium text-center text-xs whitespace-pre-wrap">
             {!props.role
               ? `Xóm 8, Xã Thạch Thán, Quốc Oai, Hà Nội`
-              : `Thôn Miếu Môn, Xã Trần Phú, Huyện Chương Mỹ, Hà Nội`}
+              : `Thôn Miếu Môn, Xã Trần Phú, Huyện Chương Mỹ,\n Hà Nội`}
           </p>
         </div>
         <div>
@@ -55,6 +55,16 @@ function GeneralElement(props: any) {
             {`Tổ chức vào lúc 15 giờ 00 phút\n`}
             <span className="font-bold">Thứ hai, ngày 08/05/2023</span>
           </p>
+          {!props.role && (
+            <div className="my-2">
+              <p className="uppercase font-medium text-center text-xs leading-6">
+                Tại tư gia nhà trai
+              </p>
+              <p className="uppercase text-neutral-focus font-medium text-center text-xs whitespace-pre-wrap">
+                {`Thôn Miếu Môn, Xã Trần Phú, Huyện Chương Mỹ,\n Hà Nội`}
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </>
@@ -87,12 +97,22 @@ function LocationElement(props: any) {
   return !props.role ? (
     <>
       <div className="my-2 flex flex-col">
-        <p className="uppercase font-medium text-center text-xs leading-6">
-          Tư gia nhà gái
-        </p>
-        <p className="uppercase text-neutral-focus font-medium text-center text-xs">
-          Xóm 8, Xã Thạch Thán, Quốc Oai, Hà Nội
-        </p>
+        <div>
+          <p className="uppercase font-medium text-center text-xs leading-6">
+            Tư gia nhà gái
+          </p>
+          <p className="uppercase text-neutral-focus font-medium text-center text-xs">
+            Xóm 8, Xã Thạch Thán, Quốc Oai, Hà Nội
+          </p>
+        </div>
+        <div>
+          <p className="uppercase font-medium text-center text-xs leading-6">
+            Liên hệ
+          </p>
+          <p className="uppercase text-neutral-focus font-medium text-center text-xs whitespace-pre-wrap">
+            0972925445
+          </p>
+        </div>
         <button
           className="btn btn-outline btn-primary my-3"
           onClick={() =>
@@ -103,12 +123,22 @@ function LocationElement(props: any) {
         </button>
       </div>
       <div className="my-2 flex flex-col">
-        <p className="uppercase font-medium text-center text-xs leading-6">
-          Tư gia nhà trai
-        </p>
-        <p className="uppercase text-neutral-focus font-medium text-center text-xs">
-          Thôn Miếu Môn, Xã Trần Phú, Huyện Chương Mỹ, Hà Nội.
-        </p>
+        <div>
+          <p className="uppercase font-medium text-center text-xs leading-6">
+            Tư gia nhà trai
+          </p>
+          <p className="uppercase text-neutral-focus font-medium text-center text-xs whitespace-pre-wrap">
+            {`Thôn Miếu Môn, Xã Trần Phú, Huyện Chương Mỹ,\n Hà Nội`}
+          </p>
+        </div>
+        <div>
+          <p className="uppercase font-medium text-center text-xs leading-6">
+            Liên hệ
+          </p>
+          <p className="uppercase text-neutral-focus font-medium text-center text-xs whitespace-pre-wrap">
+            0916627496
+          </p>
+        </div>
         <button
           className="btn btn-outline btn-primary my-3"
           onClick={() =>
@@ -122,12 +152,23 @@ function LocationElement(props: any) {
   ) : (
     <>
       <div className="my-2 flex flex-col">
-        <p className="uppercase font-medium text-center text-xs leading-6">
-          Tư gia nhà trai
-        </p>
-        <p className="uppercase text-neutral-focus font-medium text-center text-xs">
-          Thôn Miếu Môn, Xã Trần Phú, Huyện Chương Mỹ, Hà Nội.
-        </p>
+        <div className="my-1">
+          <p className="uppercase font-medium text-center text-xs leading-6">
+            Tư gia nhà trai
+          </p>
+          <p className="uppercase text-neutral-focus font-medium text-center text-xs whitespace-pre-wrap">
+            {`Thôn Miếu Môn, Xã Trần Phú, Huyện Chương Mỹ,\n Hà Nội.`}
+          </p>
+        </div>
+        <div>
+          <p className="uppercase font-medium text-center text-xs leading-6">
+            Liên hệ
+          </p>
+          <p className="uppercase text-neutral-focus font-medium text-center text-xs whitespace-pre-wrap">
+            0916627496
+          </p>
+        </div>
+
         <button
           className="btn btn-outline btn-primary my-3"
           onClick={() =>
@@ -138,12 +179,22 @@ function LocationElement(props: any) {
         </button>
       </div>
       <div className="my-2 flex flex-col">
-        <p className="uppercase font-medium text-center text-xs leading-6">
-          Tư gia nhà gái
-        </p>
-        <p className="uppercase text-neutral-focus font-medium text-center text-xs">
-          Xóm 8, Xã Thạch Thán, Quốc Oai, Hà Nội
-        </p>
+        <div className="my-1">
+          <p className="uppercase font-medium text-center text-xs leading-6">
+            Tư gia nhà gái
+          </p>
+          <p className="uppercase text-neutral-focus font-medium text-center text-xs">
+            Xóm 8, Xã Thạch Thán, Quốc Oai, Hà Nội
+          </p>
+        </div>
+        <div>
+          <p className="uppercase font-medium text-center text-xs leading-6">
+            Liên hệ
+          </p>
+          <p className="uppercase text-neutral-focus font-medium text-center text-xs whitespace-pre-wrap">
+            0972925445
+          </p>
+        </div>
         <button
           className="btn btn-outline btn-primary my-3"
           onClick={() =>
